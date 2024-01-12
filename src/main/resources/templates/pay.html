@@ -80,7 +80,8 @@ function verifyPayment(orderId, paymentId, signature) {
          .fail(function(error) {
              console.error("Error:", error);
          });
-}function verifyPayment(orderId, paymentId, signature) {
+}
+	function verifyPayment(orderId, paymentId, signature) {
      $.post("/verify", { orderId: orderId, paymentId: paymentId, signature: signature })
          .done(function(isValid) {
              if (isValid) {
